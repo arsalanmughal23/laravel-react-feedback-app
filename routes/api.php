@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/register', [Api\Auth\RegisteredUserApiController::class, 'store']);
+
+Route::post('/login', [Api\Auth\AuthApiController::class, 'store']);
+
+Route::post('/forgot-password', [Api\Auth\PasswordResetLinkApiController::class, 'store']);
+
+Route::post('/reset-password', [Api\Auth\ResetPasswordApiController::class, 'store']);
+
+Route::middleware(['auth:sanctum'])->group(function(){
+
+    Route::get('/auth-profile', [Api\UserApiController::class, 'authUserProfile']);
+    Route::put('/update-auth-profile', [Api\UserApiController::class, 'updateAuthUserProfile']);
+
+    Route::middleware(['throttle:6,1'])->group(function(){
+
+        Route::get('/verify-email/{id}/{hash}', Api\Auth\VerifyEmailApiController::class)
+            ->middleware(['signed']);
+        
+        Route::post('/email/verification-notification', [Api\Auth\EmailVerificationNotificationApiController::class, 'store']);
+    });
+    
+    Route::post('/logout', [Api\Auth\AuthApiController::class, 'destroy']);
 });
