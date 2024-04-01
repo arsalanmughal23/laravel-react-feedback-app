@@ -14,7 +14,7 @@ export default function GuestLayout() {
         <div className="main guestLayout">
             <Header />
 
-            <section className="flex justify-center h-full">
+            <section className="content fixed top-0 flex justify-center h-screen w-full">
                 <div className="container h-full md:p-10">
                     <div className="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
                         <div className="w-full">

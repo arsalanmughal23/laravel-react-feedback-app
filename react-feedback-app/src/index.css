@@ -5,6 +5,7 @@
     --primary-color: #0c598d;
     --primary-contrast-color: #07b2b9;
     --secondary-color: #d36117;
+    --secondary-dark-color: #8a3c0a;
     --secondary-contrast-color: #f8bb0f;
     --primary-gradient: linear-gradient(45deg, var(--primary-color), var(--primary-contrast-color));
     --secondary-gradient: linear-gradient(45deg, var(--secondary-color), var(--secondary-contrast-color));
@@ -19,11 +20,8 @@
   }
 
   html, html.dark {
-    .main.guestLayout{
-      height: 90vh;
-      header{
-        height: 10vh;
-      }
+    .main.guestLayout header{
+      z-index: 2;
     }
     .theme-btn-primary{
       @apply text-white;
@@ -35,7 +33,7 @@
     }
     .highlight-text-secondary{
       color: var(--secondary-contrast-color);
-      text-shadow: 1px 1px 5px var(--secondary-color);
+      text-shadow: 1px 1px 5px var(--secondary-dark-color);
     }
   }
 }
