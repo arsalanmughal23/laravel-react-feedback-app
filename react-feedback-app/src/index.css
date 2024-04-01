@@ -1,28 +1,40 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@layer base {
+  :root{
+    --primary-color: #0c598d;
+    --primary-contrast-color: #07b2b9;
+    --secondary-color: #d36117;
+    --secondary-contrast-color: #f8bb0f;
+    --primary-gradient: linear-gradient(45deg, var(--primary-color), var(--primary-contrast-color));
+    --secondary-gradient: linear-gradient(45deg, var(--secondary-color), var(--secondary-contrast-color));
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  html {
+    @apply text-neutral-800;
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
+
+  html, html.dark {
+    .main.guestLayout{
+      height: 90vh;
+      header{
+        height: 10vh;
+      }
+    }
+    .theme-btn-primary{
+      @apply text-white;
+      background: var(--primary-gradient) !important;
+    }
+    .theme-btn-outline-primary{
+      border: 2px solid var(--primary-color) !important;
+      color: var(--primary-color) !important;
+    }
+  }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+@tailwind components;
+@tailwind utilities;

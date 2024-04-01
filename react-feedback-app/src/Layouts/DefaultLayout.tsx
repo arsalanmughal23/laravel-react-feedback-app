@@ -1,7 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { RootState } from "../store";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 import Header from "../components/Header";
 
 export default function DefaultLayout() {
@@ -12,7 +11,7 @@ export default function DefaultLayout() {
         return <Navigate to="/login" />
 
     return (
-        <div className="main">
+        <div className="main defaultLayout">
             <Header />
             <Outlet />
         </div>
