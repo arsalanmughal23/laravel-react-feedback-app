@@ -21,7 +21,8 @@ export default function Login() {
                 type="text"
                 name="email"
                 label="Email"
-                className="mb-4"
+                customClasses="mb-4"
+                isRequired={true}
             ></Input>
 
             {/* <!--Password input--> */}
@@ -29,7 +30,8 @@ export default function Login() {
                 type="password"
                 name="password"
                 label="Password"
-                className="mb-4"
+                customClasses="mb-4"
+                isRequired={true}
             ></Input>
 
             {/* <!--Submit button--> */}

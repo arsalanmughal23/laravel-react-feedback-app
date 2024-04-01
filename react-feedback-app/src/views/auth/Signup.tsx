@@ -15,7 +15,8 @@ export default function Signup() {
                 type="text"
                 name="name"
                 label="Name"
-                className="mb-4"
+                customClasses="mb-4"
+                isRequired={true}
             ></Input>
             
             {/* <!--Email input--> */}
@@ -23,7 +24,8 @@ export default function Signup() {
                 type="email"
                 name="email"
                 label="Email"
-                className="mb-4"
+                customClasses="mb-4"
+                isRequired={true}
             ></Input>
 
             {/* <!--Password input--> */}
@@ -31,7 +33,8 @@ export default function Signup() {
                 type="password"
                 name="password"
                 label="Password"
-                className="mb-4"
+                customClasses="mb-4"
+                isRequired={true}
             ></Input>
             
             {/* <!--Confirm-Password input--> */}
@@ -39,7 +42,8 @@ export default function Signup() {
                 type="password"
                 name="password_confirmation"
                 label="Confirm Password"
-                className="mb-4"
+                customClasses="mb-4"
+                isRequired={true}
             ></Input>
 
             {/* <!--Submit button--> */}
