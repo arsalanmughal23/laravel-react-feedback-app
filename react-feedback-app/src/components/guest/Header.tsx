@@ -14,11 +14,11 @@ export default function Header() {
         <header className="flex items-center justify-end p-5 gap-1">
             {isLoginView ? (
                 <NavLink to="/signup" >
-                    <Button label="Sign Up" className="theme-btn-outline-primary inline-block" />
+                    <Button label="Sign Up" customClasses="theme-btn-outline-primary inline-block" />
                 </NavLink> 
             ) : (
                 <NavLink to="/login">
-                    <Button label="Login" className="theme-btn-primary" />
+                    <Button label="Login" customClasses="theme-btn-primary" />
                 </NavLink>
             )}
         </header>

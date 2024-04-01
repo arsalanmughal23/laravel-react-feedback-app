@@ -1,14 +1,13 @@
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { storeToken } from "../slicers/authSlice";
 import { useDispatch } from "react-redux";
 
 export default function Header() {
     
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const logoutAction = () => {
-        dispatch(storeToken(null))
-        return <Navigate to="/login" />
+        dispatch(storeToken(null));
     }
 
     return (

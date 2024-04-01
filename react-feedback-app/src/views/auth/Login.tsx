@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux"
 import { storeToken } from "../../slicers/authSlice"
-import { TEInput } from "tw-elements-react"
 import { Link } from "react-router-dom"
 import Button from "../../components/Button"
 import Input from "../../components/Input"
@@ -34,11 +33,14 @@ export default function Login() {
                 isRequired={true}
             ></Input>
 
-            {/* <!--Submit button--> */}
-            <div className="mb-12 pb-1 pt-1 text-center">
-                <Button label="Login" className="theme-btn-primary" onClick={loginAction} isFullWidth={true} />
+            <div className="mb-12 pt-1 text-center">
+                {/* <!--Submit button--> */}
+                <Button label="Login" customClasses="theme-btn-primary mb-1" handleClick={loginAction} isFullWidth={true} />
+
                 {/* <!--Forgot password link--> */}
-                <a href="#!">Forgot password?</a>
+                <Link to="/forgot-password" className="block mb-1">
+                    <Button label="Forgot password?" customClasses="theme-btn-outline-primary" isFullWidth={true} />
+                </Link>
             </div>
 
             {/* <!--Register button--> */}
@@ -48,7 +50,7 @@ export default function Login() {
                 </Link>
 
                 <Link to="/signup" >
-                    <Button label="Sign Up" className="theme-btn-outline-primary" />
+                    <Button label="Sign Up" customClasses="theme-btn-outline-primary" />
                 </Link>
             </div>
         </form>

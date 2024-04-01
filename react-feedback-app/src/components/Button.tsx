@@ -2,8 +2,8 @@ import { TERipple } from "tw-elements-react";
 
 interface ButtonState {
     label: string,
-    className?: string,
-    onClick?: Function,
+    customClasses?: string,
+    handleClick?: ()=>void,
     style?: {},
     isFullWidth?: boolean
     rippleColor?: string,
@@ -12,20 +12,20 @@ interface ButtonState {
 export default function Button(
     {
         label='Button', 
-        className='',
-        onClick=()=>{},
+        customClasses='',
+        handleClick,
         style={},
         isFullWidth=false,
         rippleColor='light'
     }:ButtonState) {
  
     return (
-        <TERipple rippleColor={rippleColor} className={ isFullWidth ? 'w-full' : '' } >
+        <TERipple rippleColor={rippleColor} className={ customClasses.concat(" rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal") + (isFullWidth ? ' w-full' : '') } >
             <button
-                className={ className.concat(" rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal") + (isFullWidth ? ' w-full' : '') }
+                className={ isFullWidth ? ' w-full' : '' }
                 type="button"
                 style={{ ...style, /**background: "var(--primary-gradient)"**/ }}
-                onClick={()=>onClick()}
+                onClick={handleClick}
             >
                 { label }
             </button>
