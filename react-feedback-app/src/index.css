@@ -33,6 +33,10 @@
       border: 2px solid var(--primary-color) !important;
       color: var(--primary-color) !important;
     }
+    .highlight-text-secondary{
+      color: var(--secondary-contrast-color);
+      text-shadow: 1px 1px 5px var(--secondary-color);
+    }
   }
 }
 
