@@ -6,6 +6,8 @@ import NotFound from "./views/NotFound";
 import DefaultLayout from "./Layouts/DefaultLayout";
 import GuestLayout from "./Layouts/GuestLayout";
 import FeedbackList from "./views/feedback/List";
+import ForgotPassword from "./views/auth/ForgotPassword";
+import ResetPassword from "./views/auth/ResetPassword";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup />
+            },
+            {
+                path: '/forgot-password',
+                element: <ForgotPassword />
+            },
+            {
+                path: '/reset-password',
+                element: <ResetPassword />
             }
         ]
     },
