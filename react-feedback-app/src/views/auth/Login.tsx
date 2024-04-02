@@ -3,6 +3,7 @@ import { storeToken } from "../../slicers/authSlice"
 import { Link } from "react-router-dom"
 import Button from "../../components/Button"
 import Input from "../../components/Input"
+import { themeClass } from "../../constants/constants"
 
 export default function Login() {
 
@@ -35,11 +36,11 @@ export default function Login() {
 
             <div className="mb-12 pt-1 text-center">
                 {/* <!--Submit button--> */}
-                <Button label="Login" customClasses="theme-btn-primary mb-1" handleClick={loginAction} isFullWidth={true} />
+                <Button label="Login" customClasses={`${themeClass.themeBtnPrimary} mb-1`} handleClick={loginAction} isFullWidth={true} />
 
                 {/* <!--Forgot password link--> */}
                 <Link to="/forgot-password" className="block mb-1">
-                    <Button label="Forgot password?" customClasses="theme-btn-outline-primary" isFullWidth={true} />
+                    <Button label="Forgot password?" customClasses={themeClass.themeBtnOutlinePrimary} isFullWidth={true} />
                 </Link>
             </div>
 
@@ -50,7 +51,7 @@ export default function Login() {
                 </Link>
 
                 <Link to="/signup" >
-                    <Button label="Sign Up" customClasses="theme-btn-outline-primary" />
+                    <Button label="Sign Up" customClasses={themeClass.themeBtnOutlinePrimary} />
                 </Link>
             </div>
         </form>

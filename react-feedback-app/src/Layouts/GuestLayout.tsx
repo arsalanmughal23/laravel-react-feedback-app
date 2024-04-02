@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 import { RootState } from "../store";
 import Header from "../components/guest/Header";
+import constants, { themeClass } from "../constants/constants";
 
 export default function GuestLayout() {
 
@@ -27,7 +28,7 @@ export default function GuestLayout() {
                                             <div className="text-center">
                                                 <img
                                                     className="mx-auto w-48"
-                                                    src="http://127.0.0.1:8001/src/assets/logo.png"
+                                                    src={constants.logo}
                                                     alt="logo"
                                                 />
                                                 <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
@@ -49,7 +50,7 @@ export default function GuestLayout() {
                                     >
                                         <div className="px-4 py-6 text-white md:mx-6 md:p-12">
                                             <h4 className="mb-6 text-4xl font-semibold">
-                                                Share your <span className="highlight-text-secondary">feedback</span> with us
+                                                Share your <span className={themeClass.highlightTextSecondary}>feedback</span> with us
                                             </h4>
                                             <p className="text-xl">
                                                 We value your feedbacks & we are research about your feedback and make best solution for you.

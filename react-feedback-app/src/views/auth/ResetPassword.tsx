@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import Button from "../../components/Button"
 import Input from "../../components/Input"
+import { themeClass } from "../../constants/constants"
 
 export default function ResetPassword() {
 
@@ -29,7 +30,7 @@ export default function ResetPassword() {
 
             <div className="mb-12 pt-1 text-center">
                 {/* <!--Submit button--> */}
-                <Button label="Reset Password" customClasses="theme-btn-primary mb-1" handleClick={resetPasswordAction} isFullWidth={true} />
+                <Button label="Reset Password" customClasses={`${themeClass.themeBtnPrimary} mb-1`} handleClick={resetPasswordAction} isFullWidth={true} />
             </div>
 
             {/* <!--Register button--> */}
