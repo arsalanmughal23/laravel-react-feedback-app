@@ -8,17 +8,17 @@ import {
   TERipple,
 } from "tw-elements-react";
 
-interface MenuItem {
+export interface DropdownMenuItemPropsType {
   title: string,
   link?: string,
   handleClick?: () => void
 }
-interface DropdownProps {
-  menuList: MenuItem[],
+interface DropdownPropsType {
+  menuList: DropdownMenuItemPropsType[],
   children: ReactElement
 }
 
-export default function Dropdown({ menuList, children }: DropdownProps) {
+export default function Dropdown({ menuList, children }: DropdownPropsType) {
   return (
     <TEDropdown className="flex justify-center">
       <TERipple rippleColor="light">

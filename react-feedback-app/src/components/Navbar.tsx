@@ -1,16 +1,16 @@
 import React, { ReactElement } from 'react'
 import { Link } from 'react-router-dom'
 
-interface MenuItem {
+export interface NavbarMenuItemPropsType {
     title: string,
     link: string
 }
-interface NavbarProps {
-    menuList: MenuItem[],
+interface NavbarPropsType {
+    menuList: NavbarMenuItemPropsType[],
     children?: ReactElement
 }
 
-export default function Navbar({ menuList, children }:NavbarProps) {
+export default function Navbar({ menuList, children }:NavbarPropsType) {
     return (
         <div className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
             id="navbarSupportedContent1" data-te-collapse-item>
