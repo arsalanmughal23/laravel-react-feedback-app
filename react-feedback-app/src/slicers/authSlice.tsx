@@ -11,7 +11,7 @@ export interface AuthState {
 }
 
 const initialState: AuthState = {
-    token: null,
+    token: localStorage.getItem('ACCESS_TOKEN') || null,
     user: null
 }
 
@@ -24,6 +24,12 @@ export const authSlice = createSlice({
         },
         storeToken: (state, action: PayloadAction<string | null>) => {
             state.token = action.payload
+
+            if(action.payload){
+                localStorage.setItem('ACCESS_TOKEN', action.payload);
+            } else {
+                localStorage.removeItem('ACCESS_TOKEN');
+            }
         }
     }
 })
