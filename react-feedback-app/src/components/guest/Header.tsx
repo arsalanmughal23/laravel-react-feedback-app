@@ -1,6 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import Button from "../Button";
 import { useEffect, useState } from "react";
+import { themeClass } from "../../constants/constants";
 
 export default function Header() {    
     const location = useLocation();
@@ -15,12 +16,12 @@ export default function Header() {
             {isLoginView ? (
                 <></>
                 // <NavLink to="/signup" >
-                //     <Button label="Sign Up" customClasses="theme-btn-outline-primary inline-block" />
+                //     <Button label="Sign Up" customClasses={`${themeClass.themeBtnOutlinePrimary} inline-block`} />
                 // </NavLink> 
             ) : (
                 <></>
                 // <NavLink to="/login">
-                //     <Button label="Login" customClasses="theme-btn-primary" />
+                //     <Button label="Login" customClasses={themeClass.themeBtnPrimary} />
                 // </NavLink>
             )}
         </header>
