@@ -35,18 +35,11 @@
     .theme-bg-gradient-primary{
       background: var(--primary-gradient);
     }
-    .theme-btn-outline-primary{
-      border: 2px solid var(--primary-color) !important;
-      color: var(--primary-color) !important;
-    }
     .highlight-text-primary{
       color: var(--primary-contrast-color);
       text-shadow: 1px 1px 5px var(--primary-dark-color);
     }
 
-    .theme-bg-gradient-secondary{
-      background: var(--secondary-gradient);
-    }
     .theme-btn-secondary{
       @apply text-white;
       background: var(--secondary-gradient) !important;
@@ -54,6 +47,9 @@
     .theme-btn-outline-secondary{
       border: 2px solid var(--secondary-color) !important;
       color: var(--secondary-color) !important;
+    }
+    .theme-bg-gradient-secondary{
+      background: var(--secondary-gradient);
     }
     .highlight-text-secondary{
       color: var(--secondary-contrast-color);
