@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from '../components/Button'
 import { themeClass } from '../constants/constants'
 import ModalBox from '../components/ModalBox';
+import FeedbackFormFields from './feedback/FormFields';
 
 export default function Home() {
 
@@ -9,14 +10,15 @@ export default function Home() {
 
     return (
         <>
-            <ModalBox title="Submit Feedback"
-                showModal={showFeedbackModal} setShowModal={setShowFeedbackModal} >
-                <div>Test</div>
+            <ModalBox title="Submit Feedback" restrictBackDrop={true} isCenter={true}
+                showModal={showFeedbackModal} setShowModal={setShowFeedbackModal}>
+                <FeedbackFormFields />
             </ModalBox>
 
             <div className={`${themeClass.themeBgGradientPrimary} relative flex items-center justify-center py-16 bg-gray-50 mb-16`}>
                 <div className=" absolute dark:from-neutral-700 dark:to-neutral-800"
-                    aria-hidden="true"></div>
+                    aria-hidden="true">
+                </div>
                 <div className="relative px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto text-lg text-center max-w-4xl">
                         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
