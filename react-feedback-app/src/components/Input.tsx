@@ -36,6 +36,6 @@ export default function Input(
             value={value}
             id={id}
             required={isRequired}
-        ></TEInput>
+        />
     )
 }
