@@ -21,12 +21,12 @@ export default function Textarea({
     counter = false,
     maxLength = 20,
     id, rows = 4,
-    handleChange = () => { },
+    handleChange = () => {},
 }: TextareaPropsType): JSX.Element {
     return (
-        <TETextarea id={id} label={label} rows={rows} 
-            counter={counter} maxLength={maxLength}
-            name={name} value={value} required={isRequired} className={customClasses}
+        <TETextarea name={name} value={value} labelID={name} label={label}
+            id={id} className={customClasses} required={isRequired}
+            counter={counter} maxLength={maxLength} rows={rows}
             onChange={() => handleChange()}
         ></TETextarea>
     );

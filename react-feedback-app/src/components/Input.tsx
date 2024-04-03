@@ -29,6 +29,7 @@ export default function Input(
     return (
         <TEInput
             name={name}
+            labelID={name}
             label={label}
             type={type}
             className={`${customClasses} ${fixedInputClasses}`}

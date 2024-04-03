@@ -5,7 +5,7 @@ interface ButtonState {
     buttonType?: 'button' | 'submit',
     customClasses?: string,
     childCustomClasses?: string,
-    handleClick?: ()=>void,
+    handleClick?: Function,
     style?: {},
     isFullWidth?: boolean
     rippleColor?: string,
@@ -29,7 +29,7 @@ export default function Button(
                 type={buttonType}
                 className={ 'uppercase px-6 pb-2 pt-2.5' + (isFullWidth ? ' w-full ' : ' ') + childCustomClasses }
                 style={{ ...style, /**background: "var(--primary-gradient)"**/ }}
-                onClick={handleClick}
+                onClick={()=>{handleClick && handleClick()}}
             >
                 { label }
             </button>
