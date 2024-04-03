@@ -30,7 +30,11 @@ export default function ResetPassword() {
 
             <div className="mb-12 pt-1 text-center">
                 {/* <!--Submit button--> */}
-                <Button label="Reset Password" customClasses={`${themeClass.themeBtnPrimary} mb-1`} handleClick={resetPasswordAction} isFullWidth={true} />
+                <Button label="Reset Password" 
+                    customClasses={`${themeClass.themeBtnPrimary} mb-1`} 
+                    childCustomClasses="px-6 py-2" isFullWidth={true} 
+                    handleClick={resetPasswordAction} 
+                />
             </div>
 
             {/* <!--Register button--> */}

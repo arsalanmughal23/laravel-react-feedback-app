@@ -49,7 +49,10 @@ export default function Signup() {
 
             {/* <!--Submit button--> */}
             <div className="mb-12 pb-1 pt-1 text-center">
-                <Button label="Sign Up" customClasses={themeClass.themeBtnPrimary} handleClick={signupAction} isFullWidth={true} />
+                <Button label="Sign Up" 
+                    customClasses={themeClass.themeBtnPrimary} handleClick={signupAction} isFullWidth={true}  
+                    childCustomClasses="px-6 py-2"
+                />
             </div>
 
             {/* <!--Register button--> */}
@@ -59,7 +62,10 @@ export default function Signup() {
                 </NavLink>
 
                 <NavLink to="/login" >
-                    <Button label="Login" customClasses={themeClass.themeBtnOutlinePrimary} />
+                    <Button label="Login" 
+                        customClasses={themeClass.themeBtnOutlinePrimary}  
+                        childCustomClasses="px-6 py-2"
+                    />
                 </NavLink>
             </div>
         </form>

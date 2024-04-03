@@ -32,11 +32,13 @@ export default function FeedbackForm({
     const footerActions:ButtonPropsType[] = [
         {
             label:"Close", buttonType:"button", handleClick:()=>setShowForm(false),
-            customClasses:`${themeClass.themeBgGradientSecondary} ml-1 text-white`
+            customClasses:`${themeClass.themeBgGradientSecondary} ml-1 text-white`,
+            childCustomClasses:"px-6 py-2"
         },
         {
             label:"Submit", buttonType:"submit", handleClick:handleAction,
-            customClasses:`${themeClass.themeBgGradientPrimary} ml-1 text-white`
+            customClasses:`${themeClass.themeBgGradientPrimary} ml-1 text-white`,
+            childCustomClasses:"px-6 py-2"
         }
     ]
 

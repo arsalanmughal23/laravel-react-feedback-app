@@ -24,7 +24,11 @@ export default function ForgotPassword() {
 
             <div className="mb-12 pt-1 text-center">
                 {/* <!--Submit button--> */}
-                <Button label="Forgot Password" customClasses={`${themeClass.themeBtnPrimary} mb-1`} handleClick={forgotPasswordAction} isFullWidth={true} />
+                <Button label="Forgot Password" 
+                    customClasses={`${themeClass.themeBtnPrimary} mb-1`} 
+                    childCustomClasses="px-6 py-2" isFullWidth={true}
+                    handleClick={forgotPasswordAction} 
+                />
             </div>
 
             {/* <!--Register button--> */}

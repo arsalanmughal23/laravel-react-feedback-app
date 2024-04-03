@@ -36,11 +36,20 @@ export default function Login() {
 
             <div className="mb-12 pt-1 text-center">
                 {/* <!--Submit button--> */}
-                <Button label="Login" customClasses={`${themeClass.themeBtnPrimary} mb-1`} handleClick={loginAction} isFullWidth={true} />
+                <Button label="Login" 
+                    customClasses={`${themeClass.themeBtnPrimary} mb-1`} 
+                    childCustomClasses="px-6 py-2"
+                    handleClick={loginAction} 
+                    isFullWidth={true} 
+                />
 
                 {/* <!--Forgot password link--> */}
                 <Link to="/forgot-password" className="block mb-1">
-                    <Button label="Forgot password?" customClasses={themeClass.themeBtnOutlinePrimary} isFullWidth={true} />
+                    <Button label="Forgot password?" 
+                        customClasses={themeClass.themeBtnOutlinePrimary} 
+                        childCustomClasses="px-6 py-2" 
+                        isFullWidth={true} 
+                    />
                 </Link>
             </div>
 
@@ -51,7 +60,10 @@ export default function Login() {
                 </Link>
 
                 <Link to="/signup" >
-                    <Button label="Sign Up" customClasses={themeClass.themeBtnOutlinePrimary} />
+                    <Button label="Sign Up" 
+                        customClasses={themeClass.themeBtnOutlinePrimary}  
+                        childCustomClasses="px-6 py-2"
+                    />
                 </Link>
             </div>
         </form>

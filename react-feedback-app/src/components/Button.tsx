@@ -28,7 +28,7 @@ export default function Button(
             className={ customClasses.concat(" rounded text-xs font-medium leading-normal") + (isFullWidth ? ' w-full' : '') } >
             <button
                 type={buttonType}
-                className={ 'uppercase px-6 pb-2 pt-2.5' + (isFullWidth ? ' w-full ' : ' ') + childCustomClasses }
+                className={ 'uppercase' + (isFullWidth ? ' w-full ' : ' ') + childCustomClasses }
                 style={{ ...style, /**background: "var(--primary-gradient)"**/ }}
                 onClick={()=>{handleClick && handleClick()}}
             >
