@@ -1,5 +1,6 @@
 const constants = {
     logo: 'http://127.0.0.1:8001/src/assets/logo.png',
+    appUrl: '/',
     theme: {
         classes: {
             themeTextPrimary: 'theme-text-primary',

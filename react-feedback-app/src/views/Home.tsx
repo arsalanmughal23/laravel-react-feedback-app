@@ -11,7 +11,7 @@ export default function Home() {
         <>
             <FeedbackForm showForm={showFeedbackModal} setShowForm={setShowFeedbackModal} />
 
-            <div className={`${themeClass.themeBgGradientPrimary} relative flex items-center justify-center py-16 bg-gray-50 mb-16`}>
+            <div className={`${themeClass.themeBgGradientPrimary} relative flex items-center justify-center py-16 bg-gray-50`}>
                 <div className=" absolute dark:from-neutral-700 dark:to-neutral-800"
                     aria-hidden="true">
                 </div>
@@ -25,7 +25,7 @@ export default function Home() {
                         <Button
                             label="Place Feedback"
                             customClasses={`${themeClass.themeBtnSecondary} mt-6`}
-                            childCustomClasses={'text-base'}
+                            childCustomClasses={'text-base px-6 py-2'}
                             isFullWidth={false}
                             handleClick={() => setShowFeedbackModal(true)}
                         />
