@@ -1,6 +1,6 @@
 import { TERipple } from "tw-elements-react";
 
-interface ButtonState {
+export interface ButtonPropsType {
     label: string,
     buttonType?: 'button' | 'submit',
     customClasses?: string,
@@ -21,10 +21,11 @@ export default function Button(
         style={},
         isFullWidth=false,
         rippleColor='light'
-    }:ButtonState) {
+    }:ButtonPropsType) {
  
     return (
-        <TERipple rippleColor={rippleColor} className={ customClasses.concat(" rounded text-xs font-medium leading-normal") + (isFullWidth ? ' w-full' : '') } >
+        <TERipple rippleColor={rippleColor} 
+            className={ customClasses.concat(" rounded text-xs font-medium leading-normal") + (isFullWidth ? ' w-full' : '') } >
             <button
                 type={buttonType}
                 className={ 'uppercase px-6 pb-2 pt-2.5' + (isFullWidth ? ' w-full ' : ' ') + childCustomClasses }
