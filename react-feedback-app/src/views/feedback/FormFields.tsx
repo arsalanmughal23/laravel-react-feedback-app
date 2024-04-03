@@ -29,6 +29,7 @@ export default function FeedbackFormFields() {
                 name="category"
                 customClasses="mb-4"
                 isRequired={true}
+                search={true}
             />
 
             {/* Description Textarea */}

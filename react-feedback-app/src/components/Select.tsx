@@ -3,7 +3,8 @@ import { TESelect } from "tw-elements-react";
 export interface SelectOptionType {
     text: string,
     value: string | number,
-    defaultSelected?: boolean
+    defaultSelected?: boolean,
+    disabled?: boolean
 }
 
 interface SelectPropsType {
@@ -13,15 +14,17 @@ interface SelectPropsType {
     isRequired?: boolean,
     customClasses?: string,
     id?: string,
+    search?: boolean
 }
 
 export default function Select({
     optionList,
     label,
     name,
-    isRequired,
+    isRequired=false,
     customClasses,
-    id
+    id,
+    search=false
 }:SelectPropsType): JSX.Element {
 
     return (
@@ -30,7 +33,8 @@ export default function Select({
             name={name} 
             required={isRequired} 
             className={customClasses} 
-            id={id} 
+            id={id}
+            search={search}
         />
     );
 }
