@@ -43,6 +43,9 @@
       color: var(--primary-contrast-color);
       text-shadow: 1px 1px 5px var(--primary-dark-color);
     }
+    .theme-badge-primary{
+      background: var(--primary-gradient);
+    }
 
     .theme-text-secondary{
       color: var(--secondary-color);
@@ -61,6 +64,40 @@
     .theme-highlight-text-secondary{
       color: var(--secondary-contrast-color);
       text-shadow: 1px 1px 5px var(--secondary-dark-color);
+    }
+    .theme-badge-secondary{
+      background: var(--secondary-gradient);
+    }
+
+    .theme-badge-primary,.theme-badge-secondary{
+      @apply rounded;
+      @apply text-white;
+      @apply text-sm;
+      font-size: 12px;
+      padding: 0px 3px 2px 3px;
+    }
+
+    .tabComponent.main .tabPane{
+      @apply flex-wrap;
+      @apply gap-[8px];
+    }
+    /* SM Screen */
+    @media (max-width:500px) {
+      .tabComponent.main{
+        .tabPane{
+          @apply flex-col;
+          @apply w-[calc(100%-5%)];
+        }
+        .tabContent{
+          @apply flex;
+          @apply justify-center;
+        }
+      }
+    }
+
+    /* LG Screen */
+    @media (min-width:501px) {  
+      
     }
   }
 }
