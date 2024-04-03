@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Button from '../components/Button'
 import { themeClass } from '../constants/constants'
-import ModalBox from '../components/ModalBox';
-import FeedbackFormFields from './feedback/FormFields';
+import FeedbackForm from './feedback/Form'
 
 export default function Home() {
 
@@ -10,10 +9,7 @@ export default function Home() {
 
     return (
         <>
-            <ModalBox title="Submit Feedback" restrictBackDrop={true} isCenter={true} theme='secondary'
-                showModal={showFeedbackModal} setShowModal={setShowFeedbackModal}>
-                <FeedbackFormFields />
-            </ModalBox>
+            <FeedbackForm showForm={showFeedbackModal} setShowForm={setShowFeedbackModal} />
 
             <div className={`${themeClass.themeBgGradientPrimary} relative flex items-center justify-center py-16 bg-gray-50 mb-16`}>
                 <div className=" absolute dark:from-neutral-700 dark:to-neutral-800"

@@ -1,8 +1,10 @@
+import { ButtonPropsType } from "../../components/Button";
 import FieldGroup from "../../components/FieldGroup";
 import Input from "../../components/Input";
 import ModalBox from "../../components/ModalBox";
 import Select, { SelectOptionType } from "../../components/Select";
 import Textarea from "../../components/Textarea";
+import { themeClass } from "../../constants/constants";
 
 interface FeedbackFormPropsType {
     showForm: boolean,
@@ -14,8 +16,9 @@ export default function FeedbackForm({
 }:FeedbackFormPropsType) {
 
     const categorySelectOptions:SelectOptionType[] = [
+        // { text: "Select Category", value: 0, defaultSelected: true, disabled: true },
         { text: "Bug report", value: 1 },
-        { text: "Feature", value: 2, defaultSelected: true },
+        { text: "Feature", value: 2 },
         { text: "Request", value: 3 },
         { text: "Improvement", value: 4 },
         { text: "Bug fix", value: 5 },
@@ -25,14 +28,26 @@ export default function FeedbackForm({
         console.log('Submited');
         // setShowForm(false);
     }
+    
+    const footerActions:ButtonPropsType[] = [
+        {
+            label:"Close", buttonType:"button", handleClick:()=>setShowForm(false),
+            customClasses:`${themeClass.themeBgGradientSecondary} ml-1 text-white`
+        },
+        {
+            label:"Submit", buttonType:"submit", handleClick:handleAction,
+            customClasses:`${themeClass.themeBgGradientPrimary} ml-1 text-white`
+        }
+    ]
 
     return (
         <>
             <ModalBox title="Submit Feedback" restrictBackDrop={true} isCenter={true} theme='secondary'
                 showModal={showForm} setShowModal={setShowForm}
-                handleAction={handleAction}>
-
-                <form action="/" id="feedbackForm">
+                footerActions={footerActions}
+                formProps={{ action:'/', method:"POST" }} 
+            >
+                <>
                     {/* Title Field Group */}
                     <FieldGroup errors={['Title is required']} customClasses="mb-4">
                         {/* Title Input */ }
@@ -68,8 +83,7 @@ export default function FeedbackForm({
                             maxLength={50}
                         />
                     </FieldGroup>
-                </form>
-
+                </>
             </ModalBox>
         </>
     )
