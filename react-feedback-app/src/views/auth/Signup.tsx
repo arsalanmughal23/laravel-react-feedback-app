@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
+import { themeClass } from "../../constants/constants";
 
 export default function Signup() {
 
@@ -48,7 +49,7 @@ export default function Signup() {
 
             {/* <!--Submit button--> */}
             <div className="mb-12 pb-1 pt-1 text-center">
-                <Button label="Sign Up" customClasses="theme-btn-primary" handleClick={signupAction} isFullWidth={true} />
+                <Button label="Sign Up" customClasses={themeClass.themeBtnPrimary} handleClick={signupAction} isFullWidth={true} />
             </div>
 
             {/* <!--Register button--> */}
@@ -58,7 +59,7 @@ export default function Signup() {
                 </NavLink>
 
                 <NavLink to="/login" >
-                    <Button label="Login" customClasses="theme-btn-outline-primary" />
+                    <Button label="Login" customClasses={themeClass.themeBtnOutlinePrimary} />
                 </NavLink>
             </div>
         </form>

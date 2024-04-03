@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import Button from "../../components/Button"
 import Input from "../../components/Input"
+import { themeClass } from "../../constants/constants";
 
 export default function ForgotPassword() {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function ForgotPassword() {
 
             <div className="mb-12 pt-1 text-center">
                 {/* <!--Submit button--> */}
-                <Button label="Forgot Password" customClasses="theme-btn-primary mb-1" handleClick={forgotPasswordAction} isFullWidth={true} />
+                <Button label="Forgot Password" customClasses={`${themeClass.themeBtnPrimary} mb-1`} handleClick={forgotPasswordAction} isFullWidth={true} />
             </div>
 
             {/* <!--Register button--> */}

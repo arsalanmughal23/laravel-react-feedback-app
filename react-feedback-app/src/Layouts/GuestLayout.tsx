@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 import { RootState } from "../store";
 import Header from "../components/guest/Header";
+import constants, { themeClass } from "../constants/constants";
 
 export default function GuestLayout() {
 
@@ -14,7 +15,7 @@ export default function GuestLayout() {
         <div className="main guestLayout">
             <Header />
 
-            <section className="flex justify-center h-full">
+            <section className="content fixed top-0 flex justify-center h-screen w-full">
                 <div className="container h-full md:p-10">
                     <div className="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
                         <div className="w-full">
@@ -27,7 +28,7 @@ export default function GuestLayout() {
                                             <div className="text-center">
                                                 <img
                                                     className="mx-auto w-48"
-                                                    src="http://127.0.0.1:8001/src/assets/logo.png"
+                                                    src={constants.logo}
                                                     alt="logo"
                                                 />
                                                 <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
@@ -49,7 +50,7 @@ export default function GuestLayout() {
                                     >
                                         <div className="px-4 py-6 text-white md:mx-6 md:p-12">
                                             <h4 className="mb-6 text-4xl font-semibold">
-                                                Share your feedback with us
+                                                Share your <span className={themeClass.themeTextHighlightSecondary}>feedback</span> with us
                                             </h4>
                                             <p className="text-xl">
                                                 We value your feedbacks & we are research about your feedback and make best solution for you.

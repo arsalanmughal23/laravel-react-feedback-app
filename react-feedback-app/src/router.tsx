@@ -8,6 +8,7 @@ import GuestLayout from "./Layouts/GuestLayout";
 import FeedbackList from "./views/feedback/List";
 import ForgotPassword from "./views/auth/ForgotPassword";
 import ResetPassword from "./views/auth/ResetPassword";
+import Home from "./views/Home";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Navigate to="/profile" />
+                element: <Home />
             },
             {
                 path: '/profile',
