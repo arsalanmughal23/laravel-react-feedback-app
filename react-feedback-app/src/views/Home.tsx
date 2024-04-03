@@ -10,7 +10,7 @@ export default function Home() {
 
     return (
         <>
-            <ModalBox title="Submit Feedback" restrictBackDrop={true} isCenter={true}
+            <ModalBox title="Submit Feedback" restrictBackDrop={true} isCenter={true} theme='secondary'
                 showModal={showFeedbackModal} setShowModal={setShowFeedbackModal}>
                 <FeedbackFormFields />
             </ModalBox>

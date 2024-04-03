@@ -18,7 +18,8 @@ interface ModalBox {
     isCenter?: boolean,
     position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right',
     size?: 'sm' | 'lg' | 'xl' | 'fullscreen',
-    restrictBackDrop?: boolean
+    restrictBackDrop?: boolean,
+    theme?: 'primary' | 'secondary'
 }
 
 export default function ModalBox({
@@ -29,8 +30,24 @@ export default function ModalBox({
     position = 'top-right',
     size = 'lg',
     restrictBackDrop = false,
-    children
+    children,
+    theme = 'primary'
 }: ModalBox) {
+
+    let headerClasses = "";
+    let headerTitleClasses = "";
+
+    switch (theme) {
+        case 'primary':
+            headerClasses += `${themeClass.themeBgGradientPrimary}`;
+            headerTitleClasses += `${themeClass.themeTextHighlightPrimary}`;
+        break;
+        case 'secondary':
+            headerClasses += `${themeClass.themeBgGradientSecondary}`
+            headerTitleClasses += `${themeClass.themeTextHighlightSecondary}`;
+        break;
+    }
+    headerTitleClasses += ` text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200`;
 
     return (
         <>
@@ -45,9 +62,9 @@ export default function ModalBox({
                     <TEModalContent>
 
                         <form action="#">
-                            <TEModalHeader>
+                            <TEModalHeader className={headerClasses}>
                                 {/* Modal Header Content */}
-                                <h5 className={`${themeClass.themeTextSecondary} text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200`}>
+                                <h5 className={headerTitleClasses}>
                                     {title}
                                 </h5>
 
