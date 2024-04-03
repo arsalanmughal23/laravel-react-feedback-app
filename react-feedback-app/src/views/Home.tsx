@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from '../components/Button'
 import { themeClass } from '../constants/constants'
 import FeedbackForm from './feedback/Form'
+import FeedbackIndex from './feedback/Index';
 
 export default function Home() {
 
@@ -35,7 +36,8 @@ export default function Home() {
             </div>
 
             {/**  Grid  */}
-            <div className="container mx-auto mb-16">
+            <div className="container mx-auto mt-6 mb-[120px]">
+                <FeedbackIndex />
             </div>
         </>
     )
