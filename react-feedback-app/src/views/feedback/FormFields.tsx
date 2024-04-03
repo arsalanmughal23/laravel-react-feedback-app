@@ -38,6 +38,8 @@ export default function FeedbackFormFields() {
                 name="description"
                 isRequired={true}
                 rows={4}
+                counter={true}
+                maxLength={50}
             />
         </>
     )
