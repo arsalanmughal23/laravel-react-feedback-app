@@ -47,7 +47,7 @@ export default function ModalBox({
                         <form action="#">
                             <TEModalHeader>
                                 {/* Modal Header Content */}
-                                <h5 className={`${themeClass.themeColorSecondary} text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200`}>
+                                <h5 className={`${themeClass.themeTextSecondary} text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200`}>
                                     {title}
                                 </h5>
 

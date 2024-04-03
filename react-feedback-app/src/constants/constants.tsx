@@ -2,17 +2,17 @@ const constants = {
     logo: 'http://127.0.0.1:8001/src/assets/logo.png',
     theme: {
         classes: {
-            themeColorPrimary: 'theme-color-primary',
+            themeTextPrimary: 'theme-text-primary',
             themeBtnPrimary: 'theme-btn-primary',
             themeBtnOutlinePrimary: 'theme-btn-outline-primary',
             themeBgGradientPrimary: 'theme-bg-gradient-primary',
-            highlightTextPrimary: 'highlight-text-primary',
+            themeTextHighlightPrimary: 'theme-highlight-text-primary',
 
-            themeColorSecondary: 'theme-color-secondary',
+            themeTextSecondary: 'theme-text-secondary',
             themeBtnSecondary: 'theme-btn-secondary',
             themeBtnOutlineSecondary: 'theme-btn-outline-secondary',
             themeBgGradientSecondary: 'theme-bg-gradient-secondary',
-            highlightTextSecondary: 'highlight-text-secondary',
+            themeTextHighlightSecondary: 'theme-highlight-text-secondary',
         }
     }
 }

@@ -22,7 +22,7 @@ export default function Home() {
                 <div className="relative px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto text-lg text-center max-w-4xl">
                         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                            <span className="block mb-6">Submit Your <span className={themeClass.highlightTextSecondary}>Feedback</span></span>
+                            <span className="block mb-6">Submit Your <span className={themeClass.themeTextHighlightSecondary}>Feedback</span></span>
                         </h1>
                         <p className="text-3xl text-teal-50 max-w-3xl">You'll get your Solution here</p>
 

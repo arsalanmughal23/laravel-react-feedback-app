@@ -50,7 +50,7 @@ export default function GuestLayout() {
                                     >
                                         <div className="px-4 py-6 text-white md:mx-6 md:p-12">
                                             <h4 className="mb-6 text-4xl font-semibold">
-                                                Share your <span className={themeClass.highlightTextSecondary}>feedback</span> with us
+                                                Share your <span className={themeClass.themeTextHighlightSecondary}>feedback</span> with us
                                             </h4>
                                             <p className="text-xl">
                                                 We value your feedbacks & we are research about your feedback and make best solution for you.

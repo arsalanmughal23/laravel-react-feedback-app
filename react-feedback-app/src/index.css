@@ -25,7 +25,7 @@
       z-index: 2;
     }
 
-    .theme-color-primary{
+    .theme-text-primary{
       color: var(--primary-color);
     }
     .theme-btn-primary{
@@ -39,12 +39,12 @@
     .theme-bg-gradient-primary{
       background: var(--primary-gradient);
     }
-    .highlight-text-primary{
+    .theme-highlight-text-primary{
       color: var(--primary-contrast-color);
       text-shadow: 1px 1px 5px var(--primary-dark-color);
     }
 
-    .theme-color-secondary{
+    .theme-text-secondary{
       color: var(--secondary-color);
     }
     .theme-btn-secondary{
@@ -58,7 +58,7 @@
     .theme-bg-gradient-secondary{
       background: var(--secondary-gradient);
     }
-    .highlight-text-secondary{
+    .theme-highlight-text-secondary{
       color: var(--secondary-contrast-color);
       text-shadow: 1px 1px 5px var(--secondary-dark-color);
     }
