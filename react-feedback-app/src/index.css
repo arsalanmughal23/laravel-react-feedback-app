@@ -3,6 +3,7 @@
 @layer base {
   :root{
     --primary-color: #0c598d;
+    --primary-dark-color: #0c598d;
     --primary-contrast-color: #07b2b9;
     --secondary-color: #d36117;
     --secondary-dark-color: #8a3c0a;
@@ -24,6 +25,9 @@
       z-index: 2;
     }
 
+    .theme-color-primary{
+      color: var(--primary-color);
+    }
     .theme-btn-primary{
       @apply text-white;
       background: var(--primary-gradient) !important;
@@ -40,6 +44,9 @@
       text-shadow: 1px 1px 5px var(--primary-dark-color);
     }
 
+    .theme-color-secondary{
+      color: var(--secondary-color);
+    }
     .theme-btn-secondary{
       @apply text-white;
       background: var(--secondary-gradient) !important;
